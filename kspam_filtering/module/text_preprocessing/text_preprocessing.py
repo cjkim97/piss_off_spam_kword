@@ -1,14 +1,14 @@
 
 import pandas as pd
 import hgtk
-from module import main_setting
-from utils.functions_for_text import first_tag_check, complete_fake_to_real
-from utils.functions_for_math import cartesian_product
+from kspam_filtering.module import main_setting
+from kspam_filtering.utils.functions_for_text import first_tag_check, complete_fake_to_real
+from kspam_filtering.utils.functions_for_math import cartesian_product
 
 class TextPreprocessing(main_setting):
-    def __init__(self,text = '', complete_fake_df_path = '../complete_fake_df/default/complete_fake_df.csv'):
+    def __init__(self,text = '', complete_fake_df=pd.DataFrame()):
         super().__init__()
-        self.complete_fake_df = pd.read_csv(complete_fake_df_path)
+        self.complete_fake_df = complete_fake_df
         self.origin_text = text
             
     def process(self):

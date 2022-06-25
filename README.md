@@ -12,7 +12,6 @@
     - 📁 module : 해당 서비스에 사용되는 python 모듈이 있습니다
         - __ init __.py
         - 📁 complete_fake_df(완료) : 완전형 특수문자(ex. ㉼)를 원래 문자로 바꿔주는 모듈
-            - 📁 default
             - __ init __.py
             - making_complete_fake_df.py
         - 📁 predict_sentence(미완) : 문자 예측에 관련된 모듈
@@ -22,6 +21,7 @@
             - __ init __.py
             - predict.py
         - 📁 text_preprocessing(완료) : 텍스트 처리에 관련된 모듈
+            - 📁 default
             - __ init __.py
             - text_preprocessing.py
     - 📁 utils : 모듈에 사용되는 각 종 함수들이 있습니다
