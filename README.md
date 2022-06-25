@@ -11,6 +11,21 @@
         - 추후 수정
     - 📁 module : 해당 서비스에 사용되는 python 모듈이 있습니다
         - __ init __.py
-        - find_strange_part.py : 입력 받은 문장에서 이상한 부분을 추출하는 부분 입니다
-        - pred.py : 입력받은 부분이 어떤 단어인지 판단합니다
-        - 추후 수정
+        - 📁 complete_fake_df(완료) : 완전형 특수문자(ex. ㉼)를 원래 문자로 바꿔주는 모듈
+            - 📁 default
+            - __ init __.py
+            - making_complete_fake_df.py
+        - 📁 predict_sentence(미완) : 문자 예측에 관련된 모듈
+            - 📁 base 
+            - 📁 files
+            - 📁 font
+            - __ init __.py
+            - predict.py
+        - 📁 text_preprocessing(완료) : 텍스트 처리에 관련된 모듈
+            - __ init __.py
+            - text_preprocessing.py
+    - 📁 utils : 모듈에 사용되는 각 종 함수들이 있습니다
+        - __ init __.py
+        - functions_for_math.py : 수학계산에 사용되는 함수들
+        - functions_for_predict.py : 예측 모듈에 사용되는 함수들
+        - functions_for_text.py : 텍스트 처리에 사용되는 함수들

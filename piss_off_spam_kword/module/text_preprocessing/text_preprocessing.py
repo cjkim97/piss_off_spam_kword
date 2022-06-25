@@ -1,5 +1,3 @@
-import sys
-sys.path.append('/Users/gimchaejeong/Desktop/Projects/piss_off_spam_kword/piss_off_spam_kword/')
 
 import pandas as pd
 import hgtk
@@ -23,7 +21,7 @@ class TextPreprocessing(main_setting):
     def Stage1(self, text):
         
         text = complete_fake_to_real(text, df=self.complete_fake_df)
-        text = first_tag_check(text, tagger = self.TAGGER)
+        text = first_tag_check(text, self.TAGGER, self.DEL_TAG, self.DEL_PUNCTUATION, self.USE_NUMBER)
         
         return text
     
@@ -33,7 +31,7 @@ class TextPreprocessing(main_setting):
         '''
         text = ' '.join(text)
         # 삭제가 덜 된 형태소 체크를 한번 더 하겠습니다
-        text = first_tag_check(text)
+        text = first_tag_check(text, tagger = self.TAGGER)
 
         tmp_letter_list = []
         tmp_tag_list = []

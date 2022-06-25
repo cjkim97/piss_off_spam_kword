@@ -16,13 +16,15 @@ class main_setting:
     - COMPLETE_FAKE_LETTER : 완전한 글자 이모티콘
     - DEL_PUNCTUATION : 무시할 기호 목록
     - DEL_TAG : 무시할 TAG 목록
-    - DEL_NUMBER : 무시할 숫자 목록
+    - USE_NUMBER : 살릴 숫자 목록
     '''
-    def __init__(self, tagger = Okt(), nice_to_meet_u = True, tagger_name = 'Okt'):
+    def __init__(self, nice_to_meet_u = True, tagger_name = 'Okt', JVM_PATH = ''):
         # 다른 태거의 범용성을 고려할 필요가 있음
-        self.TAGGER = tagger
         if nice_to_meet_u:
-            self.TAGGER = Okt()
+            if JVM_PATH:
+                self.TAGGER = Okt(jvmpath = JVM_PATH)
+            else:
+                self.TAGGER = Okt()
             readme = '만나서 반갑습니다! Mail : nuang0530@naver.com'
             print(readme)
             print(f'Initialize the {tagger_name} Tagger...')
@@ -52,5 +54,6 @@ class main_setting:
         # 무시할 기호 목록
         self.DEL_PUNCTUATION = [',','.',"'",'"','?',';',':']
         self.DEL_TAG=['Email', 'URL', 'ScreenName']
-        self.DEL_NUMBER = ['2','3','4','5','8','9']
+        
+        self.USE_NUMBER = ['1', '6', '7', '0']
     
